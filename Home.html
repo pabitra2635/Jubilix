@@ -434,17 +434,17 @@ body {
 
             <label for="feedback" style="font-size: 25px;">Feedback:</label>
             <textarea id="feedback"style="color: black; font-family: serif;" name="feedback"placeholder="Your feedback here (Like...How the website is?)..." rows="2" required></textarea>
-
+            <div class="h-captcha" data-captcha="true"></div>
             <button class="b2" type="submit">Submit</button>
         </form>
         <div id="responseMessage"></div>
     </div>
 </section>
+<script src="https://web3forms.com/client/script.js" async defer></script>
     <script >
         function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
-
     </script>
 </body>
 </html>
