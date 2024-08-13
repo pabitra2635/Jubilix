@@ -195,9 +195,8 @@ body {
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-
         .b2{
-            width: 40%;
+            width: 30%;
             padding: 10px;
             background-color: #4609be;
             color: white;
@@ -383,7 +382,7 @@ body {
             <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
                 <textarea id="message"style="color: black; font-family: serif;" name="Message from Sujata about My Love Latter" rows="4" placeholder="Your message about My Love Latter to You..." required></textarea>
-                <button class="sendButton" type="submit">Send</button>
+                <button class="sendButton" type="submit">Send</button> 
             </form>
         </section>
         
@@ -417,29 +416,11 @@ body {
             <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
             <textarea id="message"style="color: black; font-family: serif;" name="Message from Sujata about Our Future Plans" rows="4" placeholder="Your message about Our Future Plans.." required></textarea>
             <button class="sendButton" type="submit">Send</button>
+            <input  type="hidden" name="redirect" value="https://pabitra2635.github.io/form/">
         </form>
     </section>
     <hr> <hr>
-<section>
-    <h4 style="font-size: 50px;" >Feedback Form </h4>
-        Please Give Your Valuable Feedback here...
-    <div class="feedback-container">
-        <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
-            <label for="name" style="font-size: 25px;">Name:</label>
-            <input type="text" id="name" style="color: black; font-family: serif;" placeholder="Enter your full name..." name="name" required>
 
-            <label for="email" style="font-size: 25px;">Email:</label>
-            <input type="email" id="email" style="color: black; font-family: serif;"placeholder="Enter your Email ID..." name="email" required>
-
-            <label for="feedback" style="font-size: 25px;">Feedback:</label>
-            <textarea id="feedback"style="color: black; font-family: serif;" name="feedback"placeholder="Your feedback here (Like...How the website is?)..." rows="2" required></textarea>
-            <div class="h-captcha" data-captcha="true"></div>
-            <button class="b2" type="submit">Submit</button>
-        </form>
-        <div id="responseMessage"></div>
-    </div>
-</section>
 <script src="https://web3forms.com/client/script.js" async defer></script>
     <script >
         function scrollToSection(sectionId) {
