@@ -382,6 +382,7 @@ body {
             <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
                 <textarea id="message"style="color: black; font-family: serif;" name="Message from Sujata about My Love Latter" rows="4" placeholder="Your message about My Love Latter to You..." required></textarea>
+                <div class="h-captcha"  data-captcha="true"></div>
                 <button class="sendButton" type="submit">Send</button> 
             </form>
         </section>
@@ -415,17 +416,31 @@ body {
         <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
             <textarea id="message"style="color: black; font-family: serif;" name="Message from Sujata about Our Future Plans" rows="4" placeholder="Your message about Our Future Plans.." required></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
             <button class="sendButton" type="submit">Send</button>
-            <input  type="hidden" name="redirect" value="https://pabitra2635.github.io/form/">
-        </form>
+           <input type="hidden" name="redirect" value="https://pabitra2635.github.io/form/">
     </section>
     <hr> <hr>
-
-<script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script >
         function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
     </script>
+      <script>
+        const form = document.getElementById('feedbackForm');
+        
+        form.addEventListener('submit', function(e) {
+        
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+        </script>
+</body>
 </body>
 </html>
