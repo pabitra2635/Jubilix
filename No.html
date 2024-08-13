@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible " content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title> Friendship Expression </title>
+  <title> Not bad</title>
   <style>
 body {
     margin: 0;
@@ -24,14 +24,14 @@ body {
  
 @media (max-width:450px) {
     .font{
-  font-family: 'Dancing Script', cursive ;
-  font-size: 27px;
+      Font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
 } 
 }
 @media (min-width:451px) {
     .font{
   font-family: cursive;
-  font-size: 30px;
+  font-size: 25px;
 } 
 }
 #message{
@@ -55,6 +55,7 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 #contact form button:hover{
     background-color: #db3172;
@@ -69,10 +70,26 @@ body {
     <section id="contact">
       <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
-          <textarea id="message" name="Message from Sujata (She select 'No' to celebrate your love Anniversary)" rows="2" placeholder="Your message here..." required></textarea>
+          <textarea id="message" name="Message from Sujata (She select 'No' to celebrate your love Anniversary)" rows="3" placeholder="Your message here..." required></textarea>
+          <div class="h-captcha" data-captcha="true"></div>
           <button class="sendButton" type="submit">Send</button>
       </form>
   </section>
 </div>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+  const form = document.getElementById('feedbackForm');
+  
+  form.addEventListener('submit', function(e) {
+  
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+  
+      if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field")
+          return
+      }
+  });
+  </script>
 </body>
 </html>
