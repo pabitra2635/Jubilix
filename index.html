@@ -1,95 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible " content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title> Love Anniversary </title>
-  <style>
-body {
-    background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
-    /* Subtle diamond texture */
-    background-color: #b296ef; /* Light pastel pink background */
-    background-repeat: repeat;
-    color: #1d1352; /* Dark red text */
-    font-family: 'Georgia', serif; /* Elegant, romantic font */
-}
-  .button {
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 6px 2px;
-    cursor: pointer;
-  }
-.button1 {
-  background-color: #ae18d0; /* Green for Yes */
-    color: white; /* Text color */
-
-     } /* Green */
-     .button1:hover{
-      background-color:#870da2; /* Green for Yes */
-      color: white;
-     }
-.button2 {
-  background-color: #ae18d0; /* Red for No */
-    color: white; /* Text color */ 
-} /* Blue */
-.button2:hover{
-      background-color:#870da2; /* Green for Yes */
-      color: white;
-     }
-.Developer{
-  font-size: 30px;
-text-align: center;
-color: black;
-}
-.b1{
-  margin-left: 20px;
-}
-.b2{
-  margin-right: 20px;
-}
-
-.font{
-  font-family: cursive;
-  font-size: 50px;
-}
-  </style>
-  </head>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Love Anniversary</title>
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-<body >
-  
-  <div class="w3-container w3-center w3-animate-left">
-    <h1 class="font">Do You Want to Celebrate Our Love Anniversary ???😒</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<style>
+   
 
-    <button class="b2"><a class="button button2" href="No.html">No</a> </button>
-    <button class="b1"><a class="button button1" href="Home.html" >Yes</a></button>
+.video-container {
+    position: relative;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#video1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.heading{
+    color:#ffffffe5;
+    font-family: 'fansong',cursive;
+    font-family: Georgia, serif;
+}
+#name{
+    color: yellow;
+    /* font-family: emoji; */
+    font-family: "Times New Roman", Times, serif;
+   
+}
+#landing {
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#landing h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.glow-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    background-color: #f3008e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+@media (min-width:500px) {
+    .glow-button:hover {
+    box-shadow: 0 0 10px #be00fe, 0 0 20px #be00fe, 0 0 30px #be00fe, 0 0 40px #be00fe;
+}
+.glow-button:active{
+    background-color: #9a035b;
+} 
+}
+@media (max-width:499px) {
+.glow-button:active{
+    background-color: #9a035b;
+} 
+}
+#ourStory .timeline .event {
+    margin: 20px;
+    background-image: url("https://i.ibb.co/C57wKjW/LOVE-BACKGROUND.jpg");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 55px rgba(0, 0, 0.1, 1);
+    color: aliceblue;
+}
+
+.event img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(109, 0, 218)
+}   
+
+.letter {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fa9acf;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0.1, 1);
+    margin: 0 auto;
+   
+}
+@media (min-width:500px) {
+    .letter {width: 80%; font-size: 16px;  }  
+}
+@media (max-width:499px) {
+    .letter {width: 90%; font-size: 12px;  }  
+}
+.futurePlan{
+    font-family: 'Courier New', Courier, monospace;
+}
+audio {
+    width: 80%;
+    margin-top: 20px;
+}
+video{
+    width: 25%;
+    margin-top: 20px; 
+}
+
+#message{
+    background-color: rgb(255, 223, 238);
+    width: 90%;
+    padding: 1%;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 87%);
+}
+@media (min-width:500px) {
+    #message{font-size: 16px;}
+}
+@media (max-width:499px) {
+    #message{font-size: 12px;}
+}
+#contact form button {
+    /* padding: 10px;
+    margin: 10px; */
+    width: 23%;
+    padding: 1%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+   background-color: #fd3c86;   /* #ff6f61 */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#contact form button:hover{
+    background-color: #db3172;
+}
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-color: #ffe4e1;
+    background-repeat: repeat;
+    color: #b03060; 
+    font-family: 'Dancing Script', cursive; 
+}
+.contributor{
+    color: aliceblue;
+    margin-top: 1%;
+}
+  .memories{
+    background-image: url('https://i.ibb.co/ZMJKqYm/hq720.jpg');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0.1, 1);
+ 
+    margin: 0 auto;
+    align-items: center;
+  }
+  @media (min-width:500px) {
+    .memories{   width: 70%;}
+  }
+  @media (max-width:499px) {
+    .memories{   width: 85%;}
+  }
+  .ourMemories{
   
+   margin: 10px;
+    border:2px solid palevioletred;
+    width:250px;
+    height: 444px;
+    border-radius: 3%;
+    object-fit: cover;
+  }
+  .loveLetter{
+    color: #000000;
+  }
+  .foot-panel1{
+    background-color: #503c67;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.wp{
+
+  text-align: center;
+}
+</style>
+<body>
+    <!-- Landing Page -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="video1">
+            <source src="1099414335-preview.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <section id="landing"><br><br>
+            <h1 class="heading"  style=" font-size: 50px;">Happy Love Anniversary</h1><h1 id="name" style=" font-size: 50px;">NAME</h1>
+            <br><br><p>You are my everything. Thank you for being by my side...</p><br>
+            <button class="glow-button" onclick="scrollToSection('ourStory')" style="font-family: serif;">Explore Our Journey</button>
+        </section>
+    </div>
+    <!-- Our Story Section -->
+    <section id="ourStory">
+        <h2 >Our Story</h2>
+        <div class="timeline">
+            <div class="event">
+                <h2 style="color: aliceblue;" >When We First Met</h2>
+                <p>It was love at first sight...</p>
+                <div>
+                    <img src="https://i.ibb.co/vV6gZrJ/In-Shot-20240823-194639101-Copy.jpg" alt="First Meet">
+                    <img src="https://i.ibb.co/5k4LG89/In-Shot-20240823-195533493.jpg" alt="First Meet">
+                    <img src="https://i.ibb.co/v36xmGY/In-Shot-20240823-195450127.jpg" alt="First Meet">
+                </div>
+
+            </div>
+            <!-- Add more events as needed -->
+        </div>
+    </div>
+    </section>
+    <hr>
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <h1 >Photo Gallery</h1>
+        Play the song for better experience...
+        <br>
+        <iframe width="100%" height="60" src="https://vocaroo.com/embed/1gT65pF838Hk" frameborder="0" allow="autoplay"></iframe>
+  <!--Carousal Slider for contributors--> 
+  <br>     <br> 
+  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://i.ibb.co/ZTnrWb2/In-Shot-20240823-193717761.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">You & Me</h5>
+    </div>
+  </div>
+  </div>
+ </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex   justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://i.ibb.co/H4q40CQ/In-Shot-20240823-193920771-Copy.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Together Always</h5>
+    </div>
+  </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/fQPLjfq/In-Shot-20240823-193844139-Copy.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Eternal Love</h5>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/6BfVKd9/In-Shot-20240823-193657721.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">My Heart </h5>
+      
+    </div>
+  </div>
+         
+          
+      </div>
+    </div><div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/2N5378S/In-Shot-20240823-193859048.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Forever Yours</h5>
+      
+    </div>
+  </div>
+        
+      </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/NTSy4Jj/In-Shot-20240823-194043090.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Captured Love</h5>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://i.ibb.co/sqpRBgt/In-Shot-20240823-195506643.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Love Beyond Words</h5> 
+    </div>
+  </div> 
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="card-wrapper container-sm d-flex  justify-content-around">
+      <div class="card " style="width: 18rem;">
+  <img src="https://i.ibb.co/dmkjfZT/In-Shot-20240823-195543721.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Beloved</h5>
+    
+  </div>
+</div>
+    </div>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
+<div class="carousel-item">
+  <div class="card-wrapper container-sm d-flex  justify-content-around">
+  <div class="card " style="width: 18rem;">
+<img src="https://i.ibb.co/SB7QPbB/In-Shot-20240823-194329244-Copy.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Lasting Love</h5>
+
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+  <div class="card-wrapper container-sm d-flex  justify-content-around">
+  <div class="card " style="width: 18rem;">
+<img src="https://i.ibb.co/fNnXyJM/In-Shot-20240823-195554592.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Timeless Us</h5>
+
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+  <div class="card-wrapper container-sm d-flex  justify-content-around">
+  <div class="card " style="width: 18rem;">
+<img src="https://i.ibb.co/S5xsssz/In-Shot-20240823-194338630.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Eternal Bond</h5>
+
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+  <div class="card-wrapper container-sm d-flex  justify-content-around">
+  <div class="card " style="width: 18rem;">
+<img src="https://i.ibb.co/jzK7NGG/In-Shot-20240823-194319318.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Milestone of Love</h5>
+
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+  <div class="card-wrapper container-sm d-flex  justify-content-around">
+  <div class="card " style="width: 18rem;">
+<img src="https://i.ibb.co/VHdMvFq/In-Shot-20240823-194056114.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title">Heartfelt Journey</h5>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    </section>
+    <hr>
+    <!-- Love Letter Section -->
+    <section id="loveLetter">
+        <h2>My Love Letter to You</h2><br>
+        Please read carefully...
+        <div class="letter">
+            <p class="loveLetter">To My Dearest *Name,</p>
+            <p class="loveLetter">I hope this letter finds you in the best of spirits. I wanted toI hope this letter finds you in the best of spirits. I wanted to take a moment to express how much you mean to me. Every day with you feels like a blessing, and I find myself falling more in love with you as time goes by.Your smile brightens even my darkest days, and your kindness and warmth make everything better. I cherish the moments we share, from the laughter to the quiet times when words aren't needed. Just being with you brings me so much joy and peace.I am so grateful to have you in my life, and I want you to know that I am here for you, always. No matter what life brings, I promise to stand by your side, to support and love you through it all.Thank you for being you, for loving me, and for making life so beautiful. I look forward to all the wonderful memories we will continue to create together.With all my love,I hope this letter finds you in the best of spirits. I wanted to take a moment to express how much you mean to me. Every day with you feels like a blessing, and I find myself falling more in love with you as time goes by.Your smile brightens even my darkest days, and your kindness and warmth make everything better. I cherish the moments we share, from the laughter to the quiet times when words aren't needed. Just being with you brings me so much joy and peace.I am so grateful to have you in my life, and I want you to know that I am here for you, always. No matter what life brings, I promise to stand by your side, to support and love you through it all.Thank you for being you, for loving me, and for making life so beautiful. I look forward to all the wonderful memories we will continue to create together.</p>
+            <p class="loveLetter">With all my love and respect,Your *Name2</p>
+        </div>
+        <br> 
+        
+        <section id="contact">
+            <h2>Leave a Message</h2>
+            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
+                <textarea id="message"style="color: black; font-family: serif; " name="Message from Name about My Love Letter" rows="4" placeholder="Your message about My Love Latter to You..." required></textarea>
+                <div class="h-captcha"  data-captcha="true"></div>
+                <button class="sendButton" type="submit">Send</button> 
+            </form>
+        </section>
+        
+    </section>
+    <hr>
+    <!-- Video Compilation -->
+    <section id="video">
+        <h2>Our Memories</h2>
+    <div class="memories">
+        <iframe class="ourMemories"  src="https://www.youtube.com/embed/C7Sd8m7oiTM?si=XgaNq8bvBeC4sTVK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="ourMemories"  src="https://www.youtube.com/embed/aps1defxGEo?si=yec_vpYIukW5dwWy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </section>
+   
+    <hr>
+    <!-- Future Plans Section -->
+    <section id="futurePlans">
+        <h2>Our Future Plans</h2>
+        <ul class="futurePlan">
+            <li>Road Trip</li>
+            <li>Road Trip</li>
+            <li>Road Trip</li>
+            
+            <!-- Add more plans as needed -->
+        </ul>
+        <div id="map"></div> <!-- You can embed a map here if you wish -->
+    </section>
+     
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Leave a Message</h2>
+        <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="e67a582a-29ba-4180-a6ed-41d174937780">
+            <textarea id="message"style="color: black; font-family: serif;" name="Message from Name about Our Future Plans" rows="4" placeholder="Your message about Our Future Plans..." required></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
+            <button class="sendButton" type="submit">Send</button>
+           <input type="hidden" name="redirect" value="https://mini704.github.io/Feedback-Form/">
+    </section>
+    <footer>
+        <div class="foot-panel1">
+          <a href="#" style="color: white;font-family: serif;font-size: 150%;">Back to Top</a>
+        </div>
+        <div class="foot">
+        </div>
+      </footer>
+      <div class="wp">
+      <a href="https://wa.me/qr/MRKTOLBP5VHRI1"><img src="https://i.ibb.co/TRr2jvV/whatsapp-png-14.png" alt="whatsapp-png-14" height="90px" width="160px"></a>
+    </div>
+      <hr><h6 style="text-align:center; color: #472929;Font-family: 'Montserrat', sans-serif; font-weight: 600;">~:End of the Page:~</h6>
+    
+    <hr>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script >
+        function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+        const form = document.getElementById('feedbackForm');     
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+        </script>
+</body>
 </body>
 </html>
