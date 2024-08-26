@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 100% Arial, sans-serif;
+  text-decoration: none;
+  border: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #45b6fe, #6ac5fe);
+}
+
+.container {
+  width: clamp(300px, 95%, 450px);
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.container .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.container .logo {
+  width: 70%;
+}
+.container .input {
+  display: inline-flex;
+  align-items: center;
+}
+.container .input input[type="date"] {
+  margin-left: 8px;
+  padding: 2px 5px;
+  outline: 1.5px solid #020403;
+}
+.container button[type="submit"] {
+  width: 90%;
+  margin: 15px 0;
+  padding: 5px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 700;
+  background: #45b6fe;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.container #display {
+  display: block;
+  font-weight: bold;
+  width: 90%;
+  min-height: 25px;
+  margin: 0 auto;
+  padding: 3px 0;
+  background: #eaeaea;
+  border-radius: 15px;
+}
+
+</style>
+<body>
+    <section class="container">
+        <h1 class="title">birthday date countdown</h1>
+      
+        <img src="https://img.freepik.com/free-vector/cute-birthday-cake-party-cartoon-vector-icon-illustration-food-holiday-icon-concept-isolated-flat_138676-9070.jpg?w=740&t=st=1706377144~exp=1706377744~hmac=293f4807fc71bce0f9735eed3c4809d0b6d73236d67d903f7a4f161b8ec8336b" alt="Image from freepik.com by catalyststuff" class="logo">
+      
+        <div class="input">
+          <label for="dates">Your birthday date:</label>
+          <input type="date" id="dates" required>
+        </div>
+      
+        <button type="submit" onclick="times()">start count</button>
+      
+        <span id="display"></span>
+      </section>
+</body>
+<script>
+    function times() {
+  const dateInput = document.getElementById("dates").value;
+  const birthdayDate = new Date(dateInput);
+  const now = new Date();
+
+  const countdownTime = birthdayDate - now;
+  const displayTime = document.getElementById("display");
+
+  if (countdownTime < 0) {
+    displayTime.innerHTML = "Happy Birtday!";
+    return;
+  }
+
+  const seconds = Math.floor((countdownTime / 1000) % 60);
+  const minutes = Math.floor((countdownTime / 1000 / 60) % 60);
+  const hours = Math.floor((countdownTime / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(countdownTime / (1000 * 60 * 60 * 24));
+  const weeks = Math.floor(days / 7);
+  const months = Math.floor(days / 30.44);
+  const years = Math.floor(days / 365.25);
+
+  displayTime.innerHTML =
+    "Countdown: " +
+    years +
+    "y, " +
+    months +
+    "m, " +
+    weeks +
+    "w, " +
+    days +
+    "d, " +
+    hours +
+    "h, " +
+    minutes +
+    "m, " +
+    seconds +
+    "s.";
+
+  setTimeout(times, 1000);
+}
+
+</script>
+</html>
